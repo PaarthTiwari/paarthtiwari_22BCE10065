@@ -1,0 +1,37 @@
+show databases;
+
+create database vit_uni;
+
+use vit_uni;
+
+CREATE TABLE vit_bhopal (
+    full_name VARCHAR(100),
+    reg_no VARCHAR(20) PRIMARY KEY,
+    school VARCHAR(100),
+    graduation_year INT
+);
+
+INSERT INTO vit_bhopal (full_name, reg_no, school, graduation_year) VALUES
+('Aryan Sharma', '21BCE10065', 'SCOPE', 2025),
+('Rohan Mitra', '21EEE10052', 'SEE', 2025),
+('Sneha R Kumar', '21MEC10031', 'MEC', 2025),
+('Aditya Patil', '20BCE10444', 'SCOPE', 2024);
+
+INSERT INTO vit_bhopal (full_name, reg_no, school, graduation_year) VALUES
+('Prince Sahu', '21CSE1005', 'SCOPE', 2025),
+('Karti Madhwani', '21ECE1006', 'SEE', 2025),
+('Meg Mantis', '20BBA1007', 'SBBA', 2024),
+('Arjun Das', '22CIV1008', 'SCIV', 2026),
+('Divya Mahajan', '21BIO1009', 'SBIO', 2025);
+
+select * from vit_bhopal;
+
+alter table vit_bhopal add(phone varchar(10));
+
+desc vit_bhopal;
+
+alter table vit_bhopal drop column phone;
+
+alter table vit_bhopal add(s_country varchar(10) default 'India');
+
+update vit_bhopal set full_name='Paarth Tiwari' WHERE full_name='Meg Mantis';
